@@ -36,15 +36,14 @@ public class MainActivity extends ActionBarActivity {
         mResultButton = (Button) findViewById(R.id.resultButton);
         mLayout = (RelativeLayout) findViewById(R.id.mainLayout);
 
-        final String field1 = mNum1EditText.getText().toString().trim();
-        final String field2 = mNum2EditText.getText().toString().trim();
-
         this.symbol = "";
         this.result = 0;
 
         mResultButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String field1 = mNum1EditText.getText().toString().trim();
+                String field2 = mNum2EditText.getText().toString().trim();
                 if (!field1.equals("") && !field2.equals("")) {
                     int num1 = Integer.parseInt(field1);
                     int num2 = Integer.parseInt(field2);
@@ -62,6 +61,8 @@ public class MainActivity extends ActionBarActivity {
         mResultButton.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
+                String field1 = mNum1EditText.getText().toString().trim();
+                String field2 = mNum2EditText.getText().toString().trim();
                 if (!field1.equals("") && !field2.equals("")) {
                     int num1 = Integer.parseInt(field1);
                     int num2 = Integer.parseInt(field2);
